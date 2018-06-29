@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/java.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Frederick Game Works</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="jumbotron">
+                <h1 class="text-center">
+                    <strong>Train Scheduler</strong>
+                    <p>Find Your Train And Let's Go Bro</p>
+                </h1>
+            </div>
+            <div class ="row">
+                <div class="col-lg-12">
+                    <div class="card text-white bg-dark mb-3">
+                        <h4 class="card-header">Current Time</h4>
+                        <div class="card-body">
+                            <div id="displayTime" class="text-center"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="trainSchedule" class="card text-white bg-dark mb-3">
+                        <h4 class="card-header">Current Schedule</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <table class="table table-dark" id="trainScheduler">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Train Name</th>
+                                            <th scope="col">Destination</th>
+                                            <th scope="col">Frequency (min)</th>
+                                            <th scope="col">Next Arrival</th>
+                                            <th scope="col">Minutes Away</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="trainTable">
+                                        <tr>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id="inputSchedule" class="card text-white bg-dark mb-3">
+                        <h4 class="card-header">Input Details</h4>
+                        <div class="card-body">
+                            <div class="text-center">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Train Name</span>
+                                    </div>
+                                    <input type="text" id="trainNameInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Destination</span>
+                                    </div>
+                                    <input type="text" id="destinationInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">First Train Time</span>
+                                    </div>
+                                    <input type="text" id="timeInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Frequency (min)</span>
+                                    </div>
+                                    <input type="text" id="freqInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                                </div>
+                            </div>
+                            <button type="button" id="submitTrain" class="btn btn-primary btn-lg btn-block">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>
