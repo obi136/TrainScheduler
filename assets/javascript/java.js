@@ -61,7 +61,7 @@ $(document).ready(function () {
         var currentTime = moment();
         console.log("Current Time: " + moment().format("HH:mm.ss"));
 
-        var dateConvert = moment(snapshot.val().time, "HH:mm.ss").subtract(1, "years");
+        var dateConvert = moment(snapshot.val().trainTime, "HH:mm.ss").subtract(1, "years");
         console.log("CONVERTED DATE: " + dateConvert);
 
         var timeTrain = moment(dateConvert).format("HH:mm.ss");
